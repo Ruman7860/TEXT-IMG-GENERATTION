@@ -5,6 +5,7 @@ import { errorHandler } from "../error/error.js";
 dotenv.config();
 
 export const verifyUser = async (req,res,next) => {
+    console.log("")
     const token = req.cookies?.token;
     console.log("token",token)
 
