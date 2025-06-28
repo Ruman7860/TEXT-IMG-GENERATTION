@@ -107,6 +107,7 @@ export const userCredits = async (req,res,next) => {
 
     try {
         const user = await User.findById(userId);
+        console.log("user_log",{...user._doc,password:undefined})
         res.status(200).json({
             success : true,
             credits : user.creditBalance,

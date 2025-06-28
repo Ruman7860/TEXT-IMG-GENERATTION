@@ -5,6 +5,7 @@ import {jwtDecode} from 'jwt-decode';
 
 const isTokenValid = () => {
   const token = localStorage.getItem('token');
+  console.log("token from frontend",token);
   if (!token) {
     return false;
   }

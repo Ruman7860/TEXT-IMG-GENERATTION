@@ -23,6 +23,7 @@ const AppContextProvider = ({children}) => {
         if(!isTokenValid()){
             return;
         }
+        console.log("backend_url",backendUrl)
         try {
             const {data} = await axios.post(
                 `${backendUrl}/auth/user-credits`,

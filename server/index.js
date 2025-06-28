@@ -19,6 +19,8 @@ app.use(cookieParser());
 
 const port = process.env.PORT || 3000;
 
+console.log("FRONTEND_URL",process.env.FRONTEND_URL);
+
 // connection mongodb to our express server
 await connectDB();
 
