@@ -5,9 +5,7 @@ import { errorHandler } from "../error/error.js";
 dotenv.config();
 
 export const verifyUser = async (req,res,next) => {
-    console.log("")
     const token = req.cookies?.token;
-    console.log("token",token)
 
     if(!token){
         return next(errorHandler(401, "Unauthorized: Token not found"));

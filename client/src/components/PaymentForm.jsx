@@ -60,7 +60,6 @@ const PaymentForm = () => {
 
       try {
         const { token, tokenError } = await stripe.createToken(cardElement);
-        console.log(token);
         if (tokenError) {
             setErrorMessage(tokenError.message);
             toast.error(tokenError.message);

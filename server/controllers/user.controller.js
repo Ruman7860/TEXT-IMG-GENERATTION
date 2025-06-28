@@ -111,7 +111,6 @@ export const userCredits = async (req, res, next) => {
 
     try {
         const user = await User.findById(userId);
-        console.log("user_log", { ...user._doc, password: undefined })
         res.status(200).json({
             success: true,
             credits: user.creditBalance,
@@ -133,7 +132,6 @@ export const stripePayInstance = async (req, res, next) => {
         }
 
         const cardDetails = await stripe.tokens.retrieve(token);
-        console.log(cardDetails);
 
         if (!cardDetails.card) {
             return res.json(404).json({

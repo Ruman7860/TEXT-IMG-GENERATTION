@@ -8,7 +8,6 @@ import { useApp } from '../context/AppContent'
 
 const Home = () => {
   const {user} = useApp();
-  console.log(user);
   return (
     <div>
         <Header/>
